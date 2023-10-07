@@ -11,6 +11,13 @@ spring:
      url: jdbc:oracle:thin:@127.0.0.1:1521:xe
      username: SYSTEM
      password: balian1234
+     
+  boot:
+    admin:
+       client:
+         url: http://localhost:8889
+         instance:
+            management-base-url: http://localhost:9002     
 
 # Eureka Discovery Client
 
