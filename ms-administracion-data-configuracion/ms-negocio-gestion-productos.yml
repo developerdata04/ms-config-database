@@ -16,7 +16,7 @@ spring:
   boot:
     admin:
        client:
-         url: http://localhost:8889
+         url: http://localhost:8887
          instance:
             management-base-url: http://localhost:9001
 # Eureka Discovery Client
