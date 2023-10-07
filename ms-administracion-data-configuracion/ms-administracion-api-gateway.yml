@@ -1,0 +1,50 @@
+server:
+  port: 8887
+ 
+# Eureka Discovery Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+   
+spring:
+  cloud:
+    gateway:
+     discovery:
+       locator:
+         enabled: true
+         lower-case-service-id: true
+     routes:
+      - id: id-ms-clientes
+        uri: lb://MS-NEGOCIO-GESTION-CLIENTES
+        predicates:
+        - Path=/ms-clientes/**
+        filters:         
+        - RewritePath=/ms-clientes/(?<path>.*), /$\{path}
+
+      - id: id-ms-productos
+        uri: lb://MS-NEGOCIO-GESTION-PRODUCTOS
+        predicates:
+        - Path=/ms-productos/**
+        filters:         
+        - RewritePath=/ms-productos/(?<path>.*), /$\{path}
+        
+      - id: albums
+        uri: https://jsonplaceholder.typicode.com/albums
+        predicates:
+        - Path=/albums
+    
+# Activacion de endpoints         
+management:
+     endpoints:
+       web:
+         exposure:
+           include: '*'
+     endpoint:
+       gateway:
+          enabled: true
+       health:
+         show-details: always
+
+   

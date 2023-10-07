@@ -1,0 +1,24 @@
+
+MS - NEGOCIO
+-------------------------------------------------
+ms-negocio-gestion-productos				8081									
+ms-negocio-gestion-clientes					8082
+ms-negocio-gestion-pedidos					8083
+
+MS - ADMINISTRACION
+-------------------------------------------------
+
+ms-administracion-server-configuracion		8888
+ms-administracion-server-registro			8889
+ms-administracion-api-gateway				8887
+
+
+
+
+
+
+
+
+
+
+
