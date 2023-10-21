@@ -1,5 +1,5 @@
 server:
-  port: 8887
+  port: 8877
  
 # Eureka Discovery Client
 eureka:
