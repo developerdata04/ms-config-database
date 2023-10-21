@@ -17,7 +17,7 @@ spring:
          lower-case-service-id: true
      routes:
       - id: id-ms-clientes
-        uri: lb://MS-NEGOCIO-GESTION-CLIENTES
+        uri: msi://MS-NEGOCIO-GESTION-CLIENTES
         predicates:
         - Path=/ms-clientes/**
         filters:         
