@@ -17,13 +17,13 @@ spring:
          lower-case-service-id: true
      routes:
       - id: id-ms-clientes
-        uri: msi://MS-NEGOCIO-GESTION-CLIENTES
+        uri: lb://MS-NEGOCIO-GESTION-CLIENTES
         predicates:
         - Path=/ms-clientes/**
         filters:         
         - RewritePath=/ms-clientes/(?<path>.*), /$\{path}
       - id: id-ms-productos
-        uri: msi://MS-NEGOCIO-GESTION-PRODUCTOS
+        uri: lb://MS-NEGOCIO-GESTION-PRODUCTOS
         predicates:
         - Path=/ms-productos/**
         filters:         
