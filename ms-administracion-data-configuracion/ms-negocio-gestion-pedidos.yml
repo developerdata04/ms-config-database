@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 9003
 
 # Database
 #spring.jpa.hibernate.ddl-auto=create
@@ -9,8 +9,14 @@ spring:
   datasource: 
      driver-class-name: oracle.jdbc.driver.OracleDriver
      url: jdbc:oracle:thin:@127.0.0.1:1521:xe
-     username: AMJ060223_BD_PEDIDOS
-     password: 123456
+     username: SYSTEM
+     password: balian1234
+  boot:
+    admin:
+       client:
+         url: http://localhost:8887
+         instance:
+            management-base-url: http://localhost:9003     
 
 # Eureka Discovery Client
 
