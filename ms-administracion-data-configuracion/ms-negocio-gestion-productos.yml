@@ -9,9 +9,9 @@ spring:
     show-sql: true
   datasource: 
      driver-class-name: com.mysql.cj.jdbc.Driver
-     url: jdbc:mysql://database-mysql:3306/db_producto?serverTimezone=UTC
-     username: root
-     password: Aforo255#2019
+     url: jdbc:mysql://db-mysql-service:3308/AMJ060223_BD_PRODUCTOS?serverTimezone=GMT-6
+     username: usu_producto
+     password: 123456
      
   boot:
     admin:
