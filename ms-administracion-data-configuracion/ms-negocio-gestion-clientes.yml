@@ -8,9 +8,12 @@ spring:
     show-sql: false
   datasource: 
      driver-class-name: oracle.jdbc.driver.OracleDriver
-     url: jdbc:oracle:thin:@127.0.0.1:1521:xe
-     username: SYSTEM
-     password: balian1234
+#     url: jdbc:oracle:thin:@127.0.0.1:1521:xe
+#     username: SYSTEM
+#     password: balian1234
+     url: jdbc:postgresql://localhost:5434/db_clientes
+     username: postgres
+     password: Aforo2552019
 
   boot:
     admin:
