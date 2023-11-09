@@ -6,9 +6,8 @@ spring:
   data:
       mongodb:
         user: aforo255
-        password: Aforo255#2019
-        port: 27018
-        uri: mongodb://127.0.0.1/db_stock     
+        password: Aforo255#2019        
+        uri: mongodb://127.0.0.1:27018/db_stock     
   boot:
     admin:
        client:
