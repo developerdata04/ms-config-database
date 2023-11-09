@@ -5,8 +5,9 @@ server:
 #spring.jpa.hibernate.ddl-auto=create
 spring:
   jpa:
+    generate-ddl: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true
   datasource: 
 #     driver-class-name: oracle.jdbc.driver.OracleDriver
