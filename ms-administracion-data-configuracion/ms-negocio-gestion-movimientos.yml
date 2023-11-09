@@ -1,0 +1,50 @@
+server:
+  port: 9004
+
+# Database
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource: 
+     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+     url: jdbc:sqlserver://localhost:1434;databaseName=db_movimiento;encrypt=true;trustServerCertificate=true;
+     username: sa
+     password: Aforo2552019
+     
+  boot:
+    admin:
+       client:
+         url: http://localhost:8887
+         instance:
+            management-base-url: http://localhost:9001
+# Eureka Discovery Client
+
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+         
+#
+
+#Metrics related configurations
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+    gateway:
+      enabled: true   
+  endpoints:
+      web:
+        exposure:
+          include: "*"
+      health:
+        show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
