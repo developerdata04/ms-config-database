@@ -15,7 +15,7 @@ spring:
 #     username: SYSTEM
 #     password: balian1234
      driver-class-name: org.postgresql.Driver
-     url: jdbc:postgresql://localhost:5434/db_clientes
+     url: jdbc:postgresql://localhost:5434/db_cliente
      username: postgres
      password: Aforo2552019
 
