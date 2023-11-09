@@ -4,9 +4,8 @@ server:
 # Database
 spring:
   data:
-      mongodb:        
-        authentication-database: admin
-        uri: mongodb://aforo255:Aforo255#2019@127.0.0.1:27018/db_stock     
+      mongodb:              
+        uri: mongodb://aforo255:Aforo255#2019@127.0.0.1:27018/db_stock?authSource=admin
   boot:
     admin:
        client:
