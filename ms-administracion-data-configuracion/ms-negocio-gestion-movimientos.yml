@@ -9,9 +9,9 @@ spring:
     show-sql: true
   datasource: 
      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-     url: jdbc:sqlserver://localhost:1434;databaseName=db_movimiento;encrypt=true;trustServerCertificate=true;
+     url: jdbc:sqlserver://mssql-deployment:1433;databaseName=db_movimiento;encrypt=true;trustServerCertificate=true;
      username: sa
-     password: Aforo2552019
+     password: galaxy2023#
      
   boot:
     admin:
