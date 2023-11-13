@@ -22,9 +22,9 @@ spring:
   boot:
     admin:
        client:
-         url: http://localhost:8887
+         url: http://app-admin-service:8887
          instance:
-            management-base-url: http://localhost:9002     
+            management-base-url: http://localhost:92     
 
 # Eureka Discovery Client
 
@@ -32,7 +32,7 @@ eureka:
    client:
       fetch-registry: true
       serviceUrl:
-         defaultZone: http://localhost:8889/eureka
+         defaultZone: http://app-registro-service:8889/eureka
          
 #Metrics related configurations
 management:
