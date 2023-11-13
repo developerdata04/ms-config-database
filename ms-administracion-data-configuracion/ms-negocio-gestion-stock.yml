@@ -2,22 +2,16 @@ server:
   port: 9003
 
 # Database
-#spring.jpa.hibernate.ddl-auto=create
 spring:
-  jpa:
-    show-sql: false
-  datasource: 
-     driver-class-name: oracle.jdbc.driver.OracleDriver
-     url: jdbc:oracle:thin:@127.0.0.1:1521:xe
-     username: SYSTEM
-     password: balian1234
+  data:
+      mongodb:              
+        uri: mongodb://aforo255:Aforo255#2019@127.0.0.1:27018/db_stock?authSource=admin
   boot:
     admin:
        client:
          url: http://localhost:8887
          instance:
-            management-base-url: http://localhost:9003     
-
+            management-base-url: http://localhost:9003
 # Eureka Discovery Client
 
 eureka:
@@ -26,6 +20,8 @@ eureka:
       serviceUrl:
          defaultZone: http://localhost:8889/eureka
          
+#
+
 #Metrics related configurations
 management:
   endpoint:
@@ -39,6 +35,8 @@ management:
       web:
         exposure:
           include: "*"
+      health:
+        show-details: always
   metrics:
     export:
       prometheus:

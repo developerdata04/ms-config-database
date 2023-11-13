@@ -5,12 +5,19 @@ server:
 #spring.jpa.hibernate.ddl-auto=create
 spring:
   jpa:
-    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   datasource: 
-     driver-class-name: oracle.jdbc.driver.OracleDriver
-     url: jdbc:oracle:thin:@127.0.0.1:1521:xe
-     username: SYSTEM
-     password: balian1234
+#     driver-class-name: oracle.jdbc.driver.OracleDriver
+#     url: jdbc:oracle:thin:@127.0.0.1:1521:xe
+#     username: SYSTEM
+#     password: balian1234
+     driver-class-name: org.postgresql.Driver
+     url: jdbc:postgresql://localhost:5434/db_cliente
+     username: postgres
+     password: Aforo2552019
 
   boot:
     admin:
