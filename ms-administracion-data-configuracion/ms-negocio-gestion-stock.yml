@@ -5,7 +5,7 @@ server:
 spring:
   data:
       mongodb:              
-        uri: mongodb://aforo255:Aforo255#2019@127.0.0.1:27018/db_stock?authSource=admin
+        uri: mongodb://admingalaxy:galaxy2023@db-mongo-service:27017/db_stock?authSource=admin
   boot:
     admin:
        client:
