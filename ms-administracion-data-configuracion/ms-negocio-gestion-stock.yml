@@ -11,7 +11,7 @@ spring:
        client:
          url: http://app-admin-service:8887
          instance:
-            management-base-url: http://localhost:93
+            management-base-url: http://app-stock-service:93
 # Eureka Discovery Client
 
 eureka:
